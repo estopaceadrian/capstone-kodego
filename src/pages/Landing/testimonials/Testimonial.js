@@ -1,33 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import CardGroup from 'react-bootstrap/CardGroup';
 
-function TestimonialDetails({ items }) {
-  const renderedItems = items.map((item) => {
+const URL = 'https://testimonialapi.toolcarton.com/api';
+const Testimonial = () => {
+  const [testimonial, setTestimonial] = useState([]);
+
+  useEffect(() => {
+    const fetchTesti = async () => {
+      const { data } = await axios.get(URL);
+      setTestimonial(data);
+    };
+    fetchTesti();
+  }, []);
+
+  const renderedTestimonial = testimonial.map((user) => {
+    console.log(user);
     return (
-      <React.Fragment key={item.title}>
-        <Col>
-          <Card>
-            <Card.Img
-              variant="top"
-              style={{ width: '100%', height: '320px' }}
-              src={item.picture}
-            />
-            <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.content}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </React.Fragment>
+      <Card key={user.id}>
+        <Card.Img variant="top" src={user.avatar} />
+        <Card.Body>
+          <Card.Title>{user.name}</Card.Title>
+          <Card.Text>{user.message}</Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Rating: {user.rating}</small>
+        </Card.Footer>
+      </Card>
     );
   });
   return (
-    <Row xs={1} md={2} className="g-4">
-      {renderedItems}
-    </Row>
+    <CardGroup xs={1} md={2} lg={1} className="g-4">
+      {renderedTestimonial}
+    </CardGroup>
   );
-}
+};
 
-export default TestimonialDetails;
+export default Testimonial;

@@ -1,52 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-function TestimonialDetails() {
+const URL = 'https://testimonialapi.toolcarton.com/api';
+const TestimonialDetails = () => {
+  const [testimonial, setTestimonial] = useState([]);
+
+  useEffect(() => {
+    const fetchTesti = async () => {
+      const { data } = await axios.get(URL);
+      setTestimonial(data);
+    };
+    fetchTesti();
+  }, []);
+
+  const renderedTestimonial = testimonial.map((user) => {
+    return (
+      <Card>
+        <Card.Img variant="top" src={user.avatar} />
+        <Card.Body>
+          <Card.Title>{user.name}</Card.Title>
+          <Card.Text>{user.message}</Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Rating: {user.rating}</small>
+        </Card.Footer>
+      </Card>
+    );
+  });
   return (
-    <CardGroup>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
+    <CardGroup xs={1} md={2} className="g-4">
+      {renderedTestimonial}
     </CardGroup>
   );
-}
+};
 
 export default TestimonialDetails;
