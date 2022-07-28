@@ -4,8 +4,8 @@ import LoadingImage from '../../images/LogoLight.jpg';
 import LoadingImage1 from '../../images/trike4.png';
 import Button from 'react-bootstrap/Button';
 
-import Cons from './cons/Cons';
-import Testimonial from './testimonials/Testimonial';
+import Cons from '../Home/cons/Cons';
+import Testimonial from '../Home/testimonials/Testimonial';
 const Landing = () => {
   return (
     <>

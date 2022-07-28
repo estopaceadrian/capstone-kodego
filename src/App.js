@@ -1,12 +1,13 @@
 import Menu from './components/Menu';
-import Landing from './pages/Landing/Landing';
+import Home from './pages/Home/Home';
 import Route from './routes/Route';
+
 function App() {
   return (
     <div>
       <Menu />
       <Route path="/">
-        <Landing />
+        <Home />
       </Route>
     </div>
   );
