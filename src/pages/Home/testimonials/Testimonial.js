@@ -17,7 +17,6 @@ const Testimonial = () => {
   }, []);
 
   const renderedTestimonial = testimonial.map((user) => {
-    console.log(user);
     return (
       <Col key={user.id}>
         <Card style={{ width: '300px' }}>

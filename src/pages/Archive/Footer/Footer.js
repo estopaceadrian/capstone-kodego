@@ -5,10 +5,10 @@ import image from '../../../images/LogoDark.jpg';
 const Contact = (props) => {
   return (
     <div id="contact" className={styles['contact']}>
-      <div className={styles['content-container']}>
-        <h2 className={` ${styles['text']}   `}>{props.heading}</h2>
+      <div className={styles['content-container'] + ' m-3'}>
+        <h2 className={` ${styles['text']}  + mb-4  `}>{props.heading}</h2>
         <div className={styles['locations-container']}>
-          <div className={styles['location-1']}>
+          <div className={styles['location-1'] + ' mr-5'}>
             <span className={styles['heading']}>{props.Heading}</span>
             <div className={styles['adress']}>
               <svg viewBox="0 0 1024 1024" className={styles['icon']}>
@@ -75,7 +75,7 @@ const Contact = (props) => {
           </svg>
         </div>
       </div>
-      <img alt={props.image_alt} src={image} className={styles.image} />
+      <img alt={props.image_alt} src={image} className={styles['image']} />
     </div>
   );
 };
@@ -85,7 +85,7 @@ Contact.defaultProps = {
   image_alt: 'image',
   heading: 'This is where to find us',
   Heading: 'Para Official',
-  Heading1: 'Pila, Laguna, Philippines',
+  Heading1: 'Laguna, Philippines',
   text: 'Address',
   text1: 'E-mail Address',
   text2: 'Phone Number',

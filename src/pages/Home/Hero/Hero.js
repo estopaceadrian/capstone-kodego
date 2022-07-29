@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalComponent from '../../../components/ModalComponent';
 import image from '../../../images/LogoDark.jpg';
 import styles from './Hero.module.css';
 
@@ -12,7 +13,7 @@ const Hero = (props) => {
         </h1>
         <p className={` ${styles['text3'] + ' mb-3'}  `}>{props.Text}</p>
         <button className={` ${styles.ctabtn + ' btn btn-lg btn-primary '}   `}>
-          {props.Cta_btn}
+          <ModalComponent />
         </button>
       </div>
       <img alt={props.Image_alt} src={image} className={styles['image']} />
