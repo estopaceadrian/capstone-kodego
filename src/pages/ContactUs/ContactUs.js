@@ -109,7 +109,7 @@ const ContactUS = () => {
                 </li>
 
                 <li>
-                  <FontAwesomeIcon icon="fa-solid fa-phone-flip" />
+                  <i class="fa-solid fa-phone-flip"></i>
                   <p>+ 01 234 567 89</p>
                 </li>
 
