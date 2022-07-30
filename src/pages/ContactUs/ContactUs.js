@@ -88,12 +88,12 @@ const ContactUS = () => {
               </form>
 
               <div class="text-center text-md-left">
-                <a
+                <button
                   class="btn btn-primary"
                   onclick="document.getElementById('contact-form').submit();"
                 >
                   Send
-                </a>
+                </button>
               </div>
               <div class="status"></div>
             </div>
@@ -101,17 +101,17 @@ const ContactUS = () => {
             <div class="col-md-3 text-center">
               <ul class="list-unstyled mb-0">
                 <li>
-                  <img src={location} className="font-weight-bold" />
+                  <img src={location} className="font-weight-bold" alt="..." />
                   <p>Laguna, Philippines</p>
                 </li>
 
                 <li>
-                  <img src={phone} className="font-weight-bold" />
+                  <img src={phone} className="font-weight-bold" alt="..." />
                   <p>+63 917 495 7801</p>
                 </li>
 
                 <li>
-                  <img src={mail} className="font-weight-bold" />{' '}
+                  <img src={mail} className="font-weight-bold" alt="..." />{' '}
                   <p>tricycar@para.com</p>
                 </li>
               </ul>
