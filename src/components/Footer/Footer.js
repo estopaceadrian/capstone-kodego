@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../images/LogoLight.jpg';
 import styles from './Footer.module.css';
-
+import { Link } from 'react-router-dom';
 const Footer = (props) => {
   return (
     <div className="container">
@@ -96,7 +96,7 @@ Footer.defaultProps = {
   text: 'PARA',
   text1: 'About Us',
   text2: 'Pricing',
-  text3: 'Contact Us',
+  text3: '',
   text4: ' ',
   text5: ' ',
   text6: ' ',

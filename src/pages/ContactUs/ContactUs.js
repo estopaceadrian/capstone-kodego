@@ -1,10 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  solid,
-  regular,
-  brands,
-} from '@fortawesome/fontawesome-svg-core/import.macro';
+import phone from '../../images/phone.png';
+import mail from '../../images/mail.png';
+import location from '../../images/location.png';
 const ContactUS = () => {
   return (
     <>
@@ -104,18 +101,18 @@ const ContactUS = () => {
             <div class="col-md-3 text-center">
               <ul class="list-unstyled mb-0">
                 <li>
-                  <i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>San Francisco, CA 94126, USA</p>
+                  <img src={location} className="font-weight-bold" />
+                  <p>Laguna, Philippines</p>
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-phone-flip"></i>
-                  <p>+ 01 234 567 89</p>
+                  <img src={phone} className="font-weight-bold" />
+                  <p>+63 917 495 7801</p>
                 </li>
 
                 <li>
-                  <i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>contact@mdbootstrap.com</p>
+                  <img src={mail} className="font-weight-bold" />{' '}
+                  <p>tricycar@para.com</p>
                 </li>
               </ul>
             </div>
