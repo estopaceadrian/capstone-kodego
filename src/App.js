@@ -6,7 +6,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Pricing from './pages/Pricing/Pricing';
 import Footer from './components/Footer/Footer';
 import Contact from './pages/ContactUs/ContactUs';
-import Maps from './components/GeoLocation/MyComponent';
+import Directions from './components/GeoLocation/index';
 class App extends React.Component {
   render() {
     return (
@@ -19,7 +19,7 @@ class App extends React.Component {
               <Route path="/about-us" exact component={AboutUs} />
               <Route path="/pricing" exact component={Pricing} />
               <Route path="/contact-us" exact component={Contact} />
-              <Route path="/maps" exact component={Maps} />
+              <Route path="/maps" exact component={Directions} />
             </div>
             <Footer />
           </BrowserRouter>
