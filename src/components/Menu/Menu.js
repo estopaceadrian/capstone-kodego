@@ -47,6 +47,13 @@ const Menu = () => {
             >
               Contact Us
             </Link>
+            <Link
+              to="/maps"
+              onClick={scrollTop}
+              className="text-decoration-none"
+            >
+              Book Now
+            </Link>
           </Nav>
           <Nav>
             <Button variant="outline-primary">Become a Driver</Button>

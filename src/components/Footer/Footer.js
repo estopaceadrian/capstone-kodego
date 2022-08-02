@@ -96,7 +96,7 @@ Footer.defaultProps = {
   text: 'PARA',
   text1: 'About Us',
   text2: 'Pricing',
-  text3: 'Contact Us',
+  text3: '',
   text4: ' ',
   text5: ' ',
   text6: ' ',

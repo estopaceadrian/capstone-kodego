@@ -1,0 +1,9 @@
+apiKey: 'AIzaSyDOTe5Y66C83f-NLZvKqAuqRiDh-D0oR-Y';
+
+// https://www.newline.co/fullstack-react/articles/how-to-write-a-google-maps-react-com
+
+// https://morioh.com/p/eec8d279f80e
+
+//https://codingshiksha.com/react/react-js-google-maps-api-example-to-embed-full-screen-google-maps-in-website-using-typescript-full-project-for-beginners/
+
+//https://react-google-maps-api-docs.netlify.app/#marker
