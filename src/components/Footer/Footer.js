@@ -12,7 +12,7 @@ const Footer = (props) => {
             <span className={styles['text']}>
               <span>
                 <span>
-                  Professional website builder
+                  PARA - TricyCar
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -28,7 +28,7 @@ const Footer = (props) => {
                 </span>
               </span>
               <br></br>
-              <span>for developers.</span>
+              <span> </span>
             </span>
           </div>
           <div className={styles['links-container']}>

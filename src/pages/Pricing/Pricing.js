@@ -12,7 +12,7 @@ const Pricing = (props) => {
               <span className={styles['text01']}>
                 <span>
                   <span>
-                    Check the price from your pick-up locaiton to your
+                    Check the price from your pick-up location to your
                     destination. Another option if for service.
                     <span
                       dangerouslySetInnerHTML={{
